@@ -64,9 +64,6 @@ clearHistory.addEventListener("click", function () {
   callHistoryContainer.innerHTML = "";
 });
 
-
-
-
 const copyBtn = document.querySelectorAll(".copy-btn");
 
 for (const btn of copyBtn) {
@@ -74,18 +71,13 @@ for (const btn of copyBtn) {
     const card = btn.closest(".service-card");
 
     const textToCopy = card.querySelector(".helpline-number").innerText;
-    navigator.clipboard.writeText(textToCopy)
-        .then(() => {
-            alert(`Copied to clipboard: ${textToCopy}`);
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      alert(`Copied to clipboard: ${textToCopy}`);
 
-
-
-          const copyTextCounter = document.getElementById('copy-counter');
-          let count = parseInt(copyTextCounter.innerText);
-          count++;
-          copyTextCounter.innerText = count;  
+      const copyTextCounter = document.getElementById("copy-counter");
+      let count = parseInt(copyTextCounter.innerText);
+      count++;
+      copyTextCounter.innerText = count;
     });
-
-
   });
 }

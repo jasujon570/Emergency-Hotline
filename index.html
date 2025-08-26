@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emergency Service Directory</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,19 +32,19 @@
 
     <!-- navbar starts here -->
 
-    <nav class="w-[1800px] mx-auto flex justify-between items-center py-6 font-[Inter]">
+    <nav class="max-w-[1800px] mx-auto flex justify-between items-center py-6 font-[Inter] px-4 md:px-0">
         <div class="flex items-center justify-between gap-[10px]">
             <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="">
             <h2 class="text-[#006747] font-black">Emergency <br>Service</h2>
         </div>
-        <div class="flex justify-between items-center gap-5">
+        <div class="flex-col sm:flex sm:flex-row justify-between items-center gap-5">
             <div
                 class="w-[123px] h-[52px] bg-[rgba(65,255,107,0.1)] flex justify-center items-center rounded-[50px] gap-[10px]">
                 <span id="heart-count" class="text-[#000000] font-black">0</span>
                 <img class="w-[30px] h-[30px]" src="/assets/heart.png" alt="">
             </div>
             <div
-                class="w-[123px] h-[52px] bg-[rgba(65,255,107,0.1)] flex justify-center items-center rounded-[50px] gap-[10px]">
+                class="w-[123px] h-[52px] bg-[rgba(65,255,107,0.1)] flex justify-center items-center rounded-[50px] gap-[10px] my-3 sm:my-0">
                 <span id="coin-container" class="text-[#000000] font-black">100</span>
                 <img class="w-6 h-6" src="./assets/coin.png" alt="">
             </div>
@@ -54,14 +54,16 @@
                 <p>Copy</p>
             </div>
         </div>
+        <!-- <div class="block sm:hidden">
+            <i class="fa-solid fa-bars"></i>
+        </div> -->
     </nav>
 
     <!-- navbar ends here -->
 
     <!-- hero section starts here -->
 
-    <section
-        class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center py-[21px] font-[Hind_Madurai]">
+    <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center py-[21px] font-[Hind_Madurai]">
         <img class="mx-auto w-[92px] h-[92px]" src="./assets/logo-dark.png" alt="">
         <h1 class="font-bold text-[40px] text-white py-[11px]">Emergency Service Directory</h1>
         <p class="font-semibold text-[20px] text-white">Government Emergency Services at Your Fingertip – A Project by
@@ -74,9 +76,9 @@
 
     <!-- main section starts here -->
 
-    <section class="bg-[#F5FFF6]  font-[Hind_Madurai] pt-[48px] pb-[86px]">
-        <div class="flex justify-between w-[1800px] mx-auto">
-            <div class="grid grid-cols-3 gap-[30px]">
+    <section class="bg-[#F5FFF6] font-[Hind_Madurai] pt-[48px] pb-[86px]">
+        <div class="sm:flex justify-between max-w-[1800px] mx-auto gap-[30px]">
+            <div class="grid sm:grid-cols-3 gap-[30px] justify-center sm:justify-between">
 
                 <!-- card-1 -->
                 <div class="service-card w-[436px] bg-white p-8 rounded-xl shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]">
@@ -299,7 +301,7 @@
             </div>
 
 
-            <div id="call-history-container" class="w-[400px] bg-white p-6 rounded-xl">
+            <div id="call-history-container" class="w-[450px] sm:w-[400px] bg-white p-6 rounded-xl mx-auto mt-3 sm:mt-0">
                 <div class="flex justify-between items-center">
                     <p class="font-[Roboto] font-medium text-[20px] text-[#111111]"><i class="fa-regular fa-clock"></i>
                         Call History</p>
