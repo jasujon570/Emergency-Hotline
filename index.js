@@ -43,7 +43,6 @@ for (const btn of callButtons) {
 
     const historyItem = document.createElement("div");
 
-
     historyItem.innerHTML = `
     
         <div class="flex justify-between items-center p-4 my-4 bg-[#FAFAFA] rounded-lg">
@@ -57,16 +56,36 @@ for (const btn of callButtons) {
     `;
 
     callHistoryContainer.appendChild(historyItem);
-
   });
 }
 
-
-const clearHistory = document.getElementById('clear-history-btn');
-clearHistory.addEventListener('click', function(){
-    callHistoryContainer.innerHTML = '';
-})
-
+const clearHistory = document.getElementById("clear-history-btn");
+clearHistory.addEventListener("click", function () {
+  callHistoryContainer.innerHTML = "";
+});
 
 
 
+
+const copyBtn = document.querySelectorAll(".copy-btn");
+
+for (const btn of copyBtn) {
+  btn.addEventListener("click", function () {
+    const card = btn.closest(".service-card");
+
+    const textToCopy = card.querySelector(".helpline-number").innerText;
+    navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+            alert(`Copied to clipboard: ${textToCopy}`);
+
+
+
+          const copyTextCounter = document.getElementById('copy-counter');
+          let count = parseInt(copyTextCounter.innerText);
+          count++;
+          copyTextCounter.innerText = count;  
+    });
+
+
+  });
+}
