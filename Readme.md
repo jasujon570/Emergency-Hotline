@@ -14,11 +14,6 @@
 
 ## Q-2: How do you create and insert a new element into the DOM?
 
-
----
-
-## Q-2: How do you create and insert a new element into the DOM?
-
 **Ans to the question no-2:**
 
 ```javascript
